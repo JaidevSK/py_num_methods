@@ -13,7 +13,8 @@ This is the module for the Numerical Methods such as approximations, equation so
 
 ## Euler's Method
 
-```import pynm.approximations as pynma
+```
+import pynm.approximations as pynma
 x, y = pynma.euler_method(f, x0, y0, h, n)
 ```
         
@@ -34,7 +35,9 @@ x, y = pynma.euler_method(f, x0, y0, h, n)
 
 ## Graphical Solver:
 
-    ```pynm_es.solve_equation_graphically(equation, x_range, y_range)```
+```
+pynm_es.solve_equation_graphically(equation, x_range, y_range)
+```
     
   Parameters:
     - equation: function
@@ -46,7 +49,7 @@ x, y = pynma.euler_method(f, x0, y0, h, n)
     - Plots the graph
 
 ## Bisection Method:
-    ```ret = pynm_es.bisection_method(f, a, b, tol)```
+```ret = pynm_es.bisection_method(f, a, b, tol)```
         
   Parameters:
       - f: The function for which we want to find the root.
@@ -58,7 +61,7 @@ x, y = pynma.euler_method(f, x0, y0, h, n)
       - The approximate root of the function within the specified tolerance level.
 
 ## False Position Method:
-   ```ret = pynm_es.false_position_method(f, a, b, tol, max_iter)```
+```ret = pynm_es.false_position_method(f, a, b, tol, max_iter)```
 
    Parameters:
     	- f: The function for which we want to find the root.
@@ -69,7 +72,7 @@ x, y = pynma.euler_method(f, x0, y0, h, n)
       - The approximate root of the function.
 
 ## Fixed Point Iterations:
-   ```ret = pynm_es.fixed_point_iteration(f, initial_guess, tolerance, max_iterations)```
+```ret = pynm_es.fixed_point_iteration(f, initial_guess, tolerance, max_iterations)```
 
  Parameters:
     - f: The function for which we want to find the root.
@@ -85,7 +88,7 @@ x, y = pynma.euler_method(f, x0, y0, h, n)
 ```import pynm.sim_lin_eqn_solve as pynmsles```
 
 ## Gaussian Elimination:
-    ```x = pynmsles.gaussian_elimination(A, b)```
+```x = pynmsles.gaussian_elimination(A, b)```
 
  Parameters:
     - A: The A (coefficient) matrix in Ax=b
@@ -95,7 +98,7 @@ x, y = pynma.euler_method(f, x0, y0, h, n)
       - x: Solution
 
 ## LU Decomposition:
-    ```x = pynmsles.lu_decomposition(A, b)```
+```x = pynmsles.lu_decomposition(A, b)```
 
  Parameters:
     - A: The A (coefficient) matrix in Ax=b
@@ -105,7 +108,7 @@ x, y = pynma.euler_method(f, x0, y0, h, n)
       - x: Solution
 
 ## Tri Diagonal Matrix Algorithm:
-    ```x = pynmsles.solve_tdma(A, b)```
+```x = pynmsles.solve_tdma(A, b)```
 
  Parameters:
     - A: The A (coefficient) matrix in Ax=b
@@ -115,7 +118,7 @@ x, y = pynma.euler_method(f, x0, y0, h, n)
       - x: Solution
 
 ## Gauss Seidel:
-    ```x = pynmsles.gauss_seidel(A, b, x0, max_iterations=100, tolerance=1e-6)```
+```x = pynmsles.gauss_seidel(A, b, x0, max_iterations=100, tolerance=1e-6)```
 
    Parameters:
     - A: The A (coefficient) matrix in Ax=b
@@ -133,7 +136,7 @@ x, y = pynma.euler_method(f, x0, y0, h, n)
 
 ## Quadratic Interpolations:
 
-    ```y = pynmi.quadratic_interpolation(x, x0, x1, x2, y0, y1, y2)```
+```y = pynmi.quadratic_interpolation(x, x0, x1, x2, y0, y1, y2)```
     
   Parameters:
       - x : The point at which to estimate the value.
@@ -145,7 +148,7 @@ x, y = pynma.euler_method(f, x0, y0, h, n)
 
 ## Lagrange Interpolations:
 
-    ```x = pynmi.lagrange_interpolation(x, y, xi)```
+```x = pynmi.lagrange_interpolation(x, y, xi)```
     
   Parameters:
       - x, y : Arrays of data points
@@ -160,7 +163,7 @@ x, y = pynma.euler_method(f, x0, y0, h, n)
 
 ## Trapezoidal Integration:
 
-   ```val = pynmni.trapezoidal_integration(f, a, b, n)```
+```val = pynmni.trapezoidal_integration(f, a, b, n)```
 
   Parameters:
       - f: The function to be integrated.
@@ -173,7 +176,7 @@ x, y = pynma.euler_method(f, x0, y0, h, n)
 
 ## Simpsons 1/3 method:
 
-    ```val = pynmni.simpsons_13(f, a, b, n)```
+```val = pynmni.simpsons_13(f, a, b, n)```
 
   Parameters:
       - f: The function to be integrated.
@@ -186,7 +189,7 @@ x, y = pynma.euler_method(f, x0, y0, h, n)
 
 ## Simpsons 3/8 method:
 
-    ```val = pynmni.simpsons_38(f, a, b, n)```
+```val = pynmni.simpsons_38(f, a, b, n)```
 
   Parameters:
       - f: The function to be integrated.
@@ -217,7 +220,7 @@ Returns:
 
 ## Predictor Corrector Method:
 
-    ```t, y = pynmode.predictor_corrector(f, y0, t0, tn, h)```
+```t, y = pynmode.predictor_corrector(f, y0, t0, tn, h)```
 
   Parameters:
       - f: The function defining the ODE dy/dt = f(t, y).
@@ -232,7 +235,7 @@ Returns:
 
 ## Second Order Runge Kutta:
 
-    ```t, y = pynmode.runge_kutta_2(f, t0, y0, h, n)```
+```t, y = pynmode.runge_kutta_2(f, t0, y0, h, n)```
 
 Parameters:
   - f: The function defining the ODE dy/dt = f(t, y).
@@ -248,7 +251,7 @@ Returns:
 
 ## Fourth Order Runge Kutta:
 
-    ```t, y = pynmode.runge_kutta_4(f, t0, y0, h, n)```
+```t, y = pynmode.runge_kutta_4(f, t0, y0, h, n)```
 
 Parameters:
   - f: The function defining the ODE dy/dt = f(t, y).
